@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1887C44D1E67F5B00037231B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C44C1E67F5B00037231B /* main.m */; };
+		1887C4501E67F5B00037231B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C44F1E67F5B00037231B /* AppDelegate.m */; };
+		1887C4561E67F5B00037231B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1887C4541E67F5B00037231B /* Main.storyboard */; };
+		1887C4581E67F5B00037231B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1887C4571E67F5B00037231B /* Assets.xcassets */; };
+		1887C45B1E67F5B10037231B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1887C4591E67F5B10037231B /* LaunchScreen.storyboard */; };
+		1887C46E1E67F61A0037231B /* LYBannarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4631E67F61A0037231B /* LYBannarCollectionViewCell.m */; };
+		1887C46F1E67F61A0037231B /* LYBannarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887C4641E67F61A0037231B /* LYBannarCollectionViewCell.xib */; };
+		1887C4701E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4661E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m */; };
+		1887C4711E67F61A0037231B /* LYBannarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4681E67F61A0037231B /* LYBannarItemModel.m */; };
+		1887C4721E67F61A0037231B /* LYBannarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C46A1E67F61A0037231B /* LYBannarView.m */; };
+		1887C4731E67F61A0037231B /* LYBannarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887C46B1E67F61A0037231B /* LYBannarView.xib */; };
+		1887C4741E67F61A0037231B /* LYConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C46D1E67F61A0037231B /* LYConstant.m */; };
+		1887C47E1E67F6220037231B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4761E67F6220037231B /* UIView+Extension.m */; };
+		1887C47F1E67F6220037231B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4781E67F6220037231B /* ViewController.m */; };
+		1887C4801E67F6220037231B /* XXNibBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C47B1E67F6220037231B /* XXNibBridge.m */; };
+		1887C4811E67F6220037231B /* XXNibConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C47D1E67F6220037231B /* XXNibConvention.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1887C4481E67F5B00037231B /* 无限滑动轮播图.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "无限滑动轮播图.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1887C44C1E67F5B00037231B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1887C44E1E67F5B00037231B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1887C44F1E67F5B00037231B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1887C4551E67F5B00037231B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1887C4571E67F5B00037231B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1887C45A1E67F5B10037231B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1887C45C1E67F5B10037231B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1887C4621E67F61A0037231B /* LYBannarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBannarCollectionViewCell.h; sourceTree = "<group>"; };
+		1887C4631E67F61A0037231B /* LYBannarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBannarCollectionViewCell.m; sourceTree = "<group>"; };
+		1887C4641E67F61A0037231B /* LYBannarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYBannarCollectionViewCell.xib; sourceTree = "<group>"; };
+		1887C4651E67F61A0037231B /* LYBannarCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBannarCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1887C4661E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBannarCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1887C4671E67F61A0037231B /* LYBannarItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBannarItemModel.h; sourceTree = "<group>"; };
+		1887C4681E67F61A0037231B /* LYBannarItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBannarItemModel.m; sourceTree = "<group>"; };
+		1887C4691E67F61A0037231B /* LYBannarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBannarView.h; sourceTree = "<group>"; };
+		1887C46A1E67F61A0037231B /* LYBannarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBannarView.m; sourceTree = "<group>"; };
+		1887C46B1E67F61A0037231B /* LYBannarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYBannarView.xib; sourceTree = "<group>"; };
+		1887C46C1E67F61A0037231B /* LYConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYConstant.h; sourceTree = "<group>"; };
+		1887C46D1E67F61A0037231B /* LYConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYConstant.m; sourceTree = "<group>"; };
+		1887C4751E67F6220037231B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		1887C4761E67F6220037231B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		1887C4771E67F6220037231B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1887C4781E67F6220037231B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1887C47A1E67F6220037231B /* XXNibBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNibBridge.h; sourceTree = "<group>"; };
+		1887C47B1E67F6220037231B /* XXNibBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNibBridge.m; sourceTree = "<group>"; };
+		1887C47C1E67F6220037231B /* XXNibConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNibConvention.h; sourceTree = "<group>"; };
+		1887C47D1E67F6220037231B /* XXNibConvention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNibConvention.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1887C4451E67F5B00037231B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1887C43F1E67F5B00037231B = {
+			isa = PBXGroup;
+			children = (
+				1887C44A1E67F5B00037231B /* 无限滑动轮播图 */,
+				1887C4491E67F5B00037231B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1887C4491E67F5B00037231B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1887C4481E67F5B00037231B /* 无限滑动轮播图.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1887C44A1E67F5B00037231B /* 无限滑动轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				1887C44E1E67F5B00037231B /* AppDelegate.h */,
+				1887C44F1E67F5B00037231B /* AppDelegate.m */,
+				1887C4771E67F6220037231B /* ViewController.h */,
+				1887C4781E67F6220037231B /* ViewController.m */,
+				1887C4621E67F61A0037231B /* LYBannarCollectionViewCell.h */,
+				1887C4631E67F61A0037231B /* LYBannarCollectionViewCell.m */,
+				1887C4641E67F61A0037231B /* LYBannarCollectionViewCell.xib */,
+				1887C4651E67F61A0037231B /* LYBannarCollectionViewFlowLayout.h */,
+				1887C4661E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m */,
+				1887C4671E67F61A0037231B /* LYBannarItemModel.h */,
+				1887C4681E67F61A0037231B /* LYBannarItemModel.m */,
+				1887C4691E67F61A0037231B /* LYBannarView.h */,
+				1887C46A1E67F61A0037231B /* LYBannarView.m */,
+				1887C46B1E67F61A0037231B /* LYBannarView.xib */,
+				1887C46C1E67F61A0037231B /* LYConstant.h */,
+				1887C46D1E67F61A0037231B /* LYConstant.m */,
+				1887C4751E67F6220037231B /* UIView+Extension.h */,
+				1887C4761E67F6220037231B /* UIView+Extension.m */,
+				1887C4791E67F6220037231B /* XXNibBridge */,
+				1887C4541E67F5B00037231B /* Main.storyboard */,
+				1887C4571E67F5B00037231B /* Assets.xcassets */,
+				1887C4591E67F5B10037231B /* LaunchScreen.storyboard */,
+				1887C45C1E67F5B10037231B /* Info.plist */,
+				1887C44B1E67F5B00037231B /* Supporting Files */,
+			);
+			path = "无限滑动轮播图";
+			sourceTree = "<group>";
+		};
+		1887C44B1E67F5B00037231B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1887C44C1E67F5B00037231B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1887C4791E67F6220037231B /* XXNibBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1887C47A1E67F6220037231B /* XXNibBridge.h */,
+				1887C47B1E67F6220037231B /* XXNibBridge.m */,
+				1887C47C1E67F6220037231B /* XXNibConvention.h */,
+				1887C47D1E67F6220037231B /* XXNibConvention.m */,
+			);
+			path = XXNibBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1887C4471E67F5B00037231B /* 无限滑动轮播图 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1887C45F1E67F5B10037231B /* Build configuration list for PBXNativeTarget "无限滑动轮播图" */;
+			buildPhases = (
+				1887C4441E67F5B00037231B /* Sources */,
+				1887C4451E67F5B00037231B /* Frameworks */,
+				1887C4461E67F5B00037231B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "无限滑动轮播图";
+			productName = "无限滑动轮播图";
+			productReference = 1887C4481E67F5B00037231B /* 无限滑动轮播图.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1887C4401E67F5B00037231B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = liyang;
+				TargetAttributes = {
+					1887C4471E67F5B00037231B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1887C4431E67F5B00037231B /* Build configuration list for PBXProject "无限滑动轮播图" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1887C43F1E67F5B00037231B;
+			productRefGroup = 1887C4491E67F5B00037231B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1887C4471E67F5B00037231B /* 无限滑动轮播图 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1887C4461E67F5B00037231B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887C45B1E67F5B10037231B /* LaunchScreen.storyboard in Resources */,
+				1887C4731E67F61A0037231B /* LYBannarView.xib in Resources */,
+				1887C46F1E67F61A0037231B /* LYBannarCollectionViewCell.xib in Resources */,
+				1887C4581E67F5B00037231B /* Assets.xcassets in Resources */,
+				1887C4561E67F5B00037231B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1887C4441E67F5B00037231B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1887C47F1E67F6220037231B /* ViewController.m in Sources */,
+				1887C4741E67F61A0037231B /* LYConstant.m in Sources */,
+				1887C46E1E67F61A0037231B /* LYBannarCollectionViewCell.m in Sources */,
+				1887C4811E67F6220037231B /* XXNibConvention.m in Sources */,
+				1887C4701E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m in Sources */,
+				1887C4801E67F6220037231B /* XXNibBridge.m in Sources */,
+				1887C4501E67F5B00037231B /* AppDelegate.m in Sources */,
+				1887C4721E67F61A0037231B /* LYBannarView.m in Sources */,
+				1887C44D1E67F5B00037231B /* main.m in Sources */,
+				1887C47E1E67F6220037231B /* UIView+Extension.m in Sources */,
+				1887C4711E67F61A0037231B /* LYBannarItemModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1887C4541E67F5B00037231B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1887C4551E67F5B00037231B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1887C4591E67F5B10037231B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1887C45A1E67F5B10037231B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1887C45D1E67F5B10037231B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1887C45E1E67F5B10037231B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1887C4601E67F5B10037231B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "无限滑动轮播图/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lianxi.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1887C4611E67F5B10037231B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "无限滑动轮播图/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lianxi.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1887C4431E67F5B00037231B /* Build configuration list for PBXProject "无限滑动轮播图" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887C45D1E67F5B10037231B /* Debug */,
+				1887C45E1E67F5B10037231B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1887C45F1E67F5B10037231B /* Build configuration list for PBXNativeTarget "无限滑动轮播图" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1887C4601E67F5B10037231B /* Debug */,
+				1887C4611E67F5B10037231B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1887C4401E67F5B00037231B /* Project object */;
+}
