@@ -12,6 +12,5 @@
 @interface LYBannarItemModel : NSObject
 
 @property (nonatomic,copy) NSString *imageName;
-@property (nonatomic,copy) NSString *titleName;
 
 @end

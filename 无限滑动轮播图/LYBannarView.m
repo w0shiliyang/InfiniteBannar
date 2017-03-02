@@ -177,11 +177,6 @@ CGFloat _offer;
     }
 }
 
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [self.timer invalidate];
-    self.timer = nil;
-}
-
 //////用户拖拽是调用
 //- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
 //    if (fabs(scrollView.contentOffset.x -_offer) > 20) {

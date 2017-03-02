@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LYBannarView.h"
 #import "LYBannarItemModel.h"
+#import "LYConstant.h"
 
 @interface ViewController ()<LYBannarDelegate>
 @property (weak, nonatomic) IBOutlet LYBannarView *banarView;
@@ -19,12 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = RGB(97, 183, 247, 1);
     NSMutableArray * arr = [NSMutableArray new];
     for (NSInteger i = 0; i < 11; i ++) {
         LYBannarItemModel *model = [[LYBannarItemModel alloc] init];
         model.imageName = [NSString stringWithFormat:@"%zd",i];
-        model.titleName = [NSString stringWithFormat:@"原来第%zd张",i];
         [arr addObject:model];
     }
     [_banarView setData:arr];

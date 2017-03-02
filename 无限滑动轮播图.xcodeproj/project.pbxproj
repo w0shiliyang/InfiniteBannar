@@ -90,6 +90,9 @@
 				1887C44F1E67F5B00037231B /* AppDelegate.m */,
 				1887C4771E67F6220037231B /* ViewController.h */,
 				1887C4781E67F6220037231B /* ViewController.m */,
+				1887C4691E67F61A0037231B /* LYBannarView.h */,
+				1887C46A1E67F61A0037231B /* LYBannarView.m */,
+				1887C46B1E67F61A0037231B /* LYBannarView.xib */,
 				1887C4621E67F61A0037231B /* LYBannarCollectionViewCell.h */,
 				1887C4631E67F61A0037231B /* LYBannarCollectionViewCell.m */,
 				1887C4641E67F61A0037231B /* LYBannarCollectionViewCell.xib */,
@@ -97,9 +100,6 @@
 				1887C4661E67F61A0037231B /* LYBannarCollectionViewFlowLayout.m */,
 				1887C4671E67F61A0037231B /* LYBannarItemModel.h */,
 				1887C4681E67F61A0037231B /* LYBannarItemModel.m */,
-				1887C4691E67F61A0037231B /* LYBannarView.h */,
-				1887C46A1E67F61A0037231B /* LYBannarView.m */,
-				1887C46B1E67F61A0037231B /* LYBannarView.xib */,
 				1887C46C1E67F61A0037231B /* LYConstant.h */,
 				1887C46D1E67F61A0037231B /* LYConstant.m */,
 				1887C4751E67F6220037231B /* UIView+Extension.h */,
@@ -371,6 +371,7 @@
 				1887C4611E67F5B10037231B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

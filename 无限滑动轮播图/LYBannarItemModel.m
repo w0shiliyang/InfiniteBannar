@@ -10,5 +10,7 @@
 #import "LYBannarItemModel.h"
 
 @implementation LYBannarItemModel
-
+-(NSString *)description{
+    return [NSString stringWithFormat:@"图片是：%@",self.imageName];//图片是数字
+}
 @end
