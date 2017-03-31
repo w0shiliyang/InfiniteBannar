@@ -52,6 +52,14 @@ InfiniteBannnar 是一个适用于 iOS 的轮播图，支持纯代码、xib/Stor
     //设置代理
     _banarView.delegate = self;
 ```
+
+#####  点击回调
+```objc
+-(void)bannarClickWithIndex:(NSUInteger)index model:(id)model{
+    NSLog(@"点击了第%ld个，数据是:%@",index,model);
+}
+```
+
 ### 图片效果演示
 
 ![图片效果演示](https://github.com/w0shiliyang/InfiniteBannar/blob/master/bannar%E6%88%AA%E5%9B%BE.gif)
