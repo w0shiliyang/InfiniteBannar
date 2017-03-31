@@ -23,6 +23,7 @@
 		1887C47F1E67F6220037231B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C4781E67F6220037231B /* ViewController.m */; };
 		1887C4801E67F6220037231B /* XXNibBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C47B1E67F6220037231B /* XXNibBridge.m */; };
 		1887C4811E67F6220037231B /* XXNibConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887C47D1E67F6220037231B /* XXNibConvention.m */; };
+		4C7A83811E8ECD640006EE12 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A83801E8ECD640006EE12 /* UIView+Ext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		1887C47B1E67F6220037231B /* XXNibBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNibBridge.m; sourceTree = "<group>"; };
 		1887C47C1E67F6220037231B /* XXNibConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNibConvention.h; sourceTree = "<group>"; };
 		1887C47D1E67F6220037231B /* XXNibConvention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNibConvention.m; sourceTree = "<group>"; };
+		4C7A837F1E8ECD640006EE12 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		4C7A83801E8ECD640006EE12 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				1887C44F1E67F5B00037231B /* AppDelegate.m */,
 				1887C4771E67F6220037231B /* ViewController.h */,
 				1887C4781E67F6220037231B /* ViewController.m */,
+				4C7A837F1E8ECD640006EE12 /* UIView+Ext.h */,
+				4C7A83801E8ECD640006EE12 /* UIView+Ext.m */,
 				1887C4691E67F61A0037231B /* LYBannarView.h */,
 				1887C46A1E67F61A0037231B /* LYBannarView.m */,
 				1887C46B1E67F61A0037231B /* LYBannarView.xib */,
@@ -214,6 +219,7 @@
 				1887C4801E67F6220037231B /* XXNibBridge.m in Sources */,
 				1887C4501E67F5B00037231B /* AppDelegate.m in Sources */,
 				1887C4721E67F61A0037231B /* LYBannarView.m in Sources */,
+				4C7A83811E8ECD640006EE12 /* UIView+Ext.m in Sources */,
 				1887C44D1E67F5B00037231B /* main.m in Sources */,
 				1887C47E1E67F6220037231B /* UIView+Extension.m in Sources */,
 				1887C4711E67F61A0037231B /* LYBannarItemModel.m in Sources */,

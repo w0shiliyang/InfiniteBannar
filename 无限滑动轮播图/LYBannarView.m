@@ -10,18 +10,20 @@
 #import "LYBannarCollectionViewFlowLayout.h"
 #import "LYBannarItemModel.h"
 #import "LYBannarCollectionViewCell.h"
-#import "UIView+Extension.h"
+#import "UIView+Ext.h"
+
+#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
 
 #define kItemWidth ((SCREEN_WIDTH*0.8/1.45)+20)
-#define kPageCount (11)
+//#define kPageCount (11)
+#define kTime (8)
 #define kTimerInterval (4)
 
 static NSString *indentify = @"LYBannarCollectionViewCell";
 
-@interface LYBannarView()<UICollectionViewDelegate,UICollectionViewDataSource,LYBannarCollectionViewFlowLayoutDelegate>{
-    NSInteger currentIndex;
-    BOOL canRemove;
-}
+@interface LYBannarView()<UICollectionViewDelegate,UICollectionViewDataSource,LYBannarCollectionViewFlowLayoutDelegate>
+@property (assign, nonatomic) NSInteger currentIndex;
+@property (assign, nonatomic) BOOL canRemove;
 //原本数据
 @property (strong, nonatomic) NSMutableArray *modelArray;
 @property (strong, nonatomic) NSTimer *timer;
@@ -44,17 +46,23 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
 
 -(void)setData:(NSArray *)dataArray{
     _modelArray = dataArray.mutableCopy;
-    _datas = [[NSMutableArray alloc] init];
-    for (int j = 0; j < 4; j++) {
-        [_datas addObjectsFromArray:_modelArray];
+    if (dataArray.count <= 0) {
+        return;
     }
-    currentIndex = (self.datas.count/(kPageCount)/2)*kPageCount;
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-    });
-    
-    [self addtimer];
+    _pageController.numberOfPages = self.pageCount;
+    if (dataArray.count == 1) {
+        _datas = _modelArray.mutableCopy;
+    }else{
+        _datas = [[NSMutableArray alloc] init];
+        for (int j = 0; j < kTime; j++) {
+            [_datas addObjectsFromArray:_modelArray];
+        }
+        self.currentIndex = (self.datas.count/(self.pageCount)/2)*self.pageCount;
+        [self addtimer];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+        });
+    }
 }
 
 -(void)dataInit
@@ -63,11 +71,12 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
     flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     CGFloat height = kItemWidth/2.14;
     flow.itemSize = CGSizeMake(kItemWidth, height);
+    
     flow.minimumLineSpacing = 28;
     flow.minimumInteritemSpacing = 28;
     flow.needAlpha = YES;
     flow.delegate = self;
-    CGFloat oneX =self.width / 4;
+    CGFloat oneX = (SCREEN_WIDTH-kItemWidth)/2;
     flow.sectionInset = UIEdgeInsetsMake(0, oneX, 0, oneX);
     self.flow = flow;
 }
@@ -78,14 +87,13 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
 }
 
 -(void)UIInit{
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor grayColor];
     [self.collectionView setCollectionViewLayout:self.flow];
     //增加滑动阻力
     _collectionView.decelerationRate = 20;
     _collectionView.showsHorizontalScrollIndicator = NO;
     [_collectionView registerNib:[UINib nibWithNibName:indentify bundle:nil] forCellWithReuseIdentifier:indentify];
     
-    _pageController.numberOfPages = kPageCount;
     _pageController.pageIndicatorTintColor = [UIColor grayColor];
     _pageController.currentPageIndicatorTintColor = [UIColor orangeColor];
 }
@@ -94,22 +102,23 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
 -(void)addtimer
 {
     if(self.timer) return;
-    canRemove = YES;
+    self.canRemove = YES;
+    __weak typeof (self)weakself = self;
     self.timer = [NSTimer timerWithTimeInterval:kTimerInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
-        if (canRemove) {
-            NSIndexPath * index =  [NSIndexPath indexPathForRow:currentIndex+1 inSection:0];
+        if (weakself.canRemove) {
+            NSIndexPath * index =  [NSIndexPath indexPathForRow:self.currentIndex+1 inSection:0];
             [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         }
     }];
-    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode: NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode: NSRunLoopCommonModes];
 }
 
 #pragma CustomLayout的代理方法
 - (void)collectioViewScrollToIndex:(NSInteger)index
 {
     NSLog(@"第%ld个",index);
-    currentIndex = index;
-    int current = index%kPageCount;
+    self.currentIndex = index;
+    NSInteger current = index % self.pageCount;
     self.pageController.currentPage = (NSUInteger)current;
 }
 
@@ -127,8 +136,14 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
 {
     LYBannarItemModel *model = self.datas[indexPath.item];
     LYBannarCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:indentify forIndexPath:indexPath];
-    cell.heroImageVIew.image = [UIImage imageNamed:model.imageName];
+//    [cell.heroImageVIew sd_setImageWithURL:[NSURL URLWithString:model.imageName]];
+    [cell.heroImageVIew setImage:[UIImage imageNamed:model.imageName]];
     return cell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = kItemWidth/2.14;
+    return CGSizeMake(kItemWidth, height);
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -151,12 +166,16 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
         }
     }
 }
+
 -(void)delayScrolling{
-    canRemove = YES;
+    self.canRemove = YES;
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    self.canRemove = NO;
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    canRemove = NO;
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayScrolling) object:nil];
     [self performSelector:@selector(delayScrolling) withObject:nil afterDelay:1];
     [self correctScroll];
@@ -166,38 +185,26 @@ static NSString *indentify = @"LYBannarCollectionViewCell";
 CGFloat _offer;
 //手动
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    if(self.datas.count == 1) return;
     if (fabs(scrollView.contentOffset.x -_offer) > 10) {
         if (scrollView.contentOffset.x > _offer) {
-            NSIndexPath * index =  [NSIndexPath indexPathForRow:currentIndex+1 inSection:0];
+            NSIndexPath * index =  [NSIndexPath indexPathForRow:self.currentIndex+1 inSection:0];
             [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         }else{
-            NSIndexPath * index =  [NSIndexPath indexPathForRow:currentIndex-1 inSection:0];
+            NSIndexPath * index =  [NSIndexPath indexPathForRow:self.currentIndex-1 inSection:0];
             [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         }
     }
 }
 
-//////用户拖拽是调用
-//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-//    if (fabs(scrollView.contentOffset.x -_offer) > 20) {
-//        if (scrollView.contentOffset.x > _offer) {
-//            NSIndexPath * index =  [NSIndexPath indexPathForRow:currentIndex+1 inSection:0];
-//            [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-//        }else{
-//            NSIndexPath * index =  [NSIndexPath indexPathForRow:currentIndex-1 inSection:0];
-//            [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-//        }
-//    }
-//}
-
 -(void)correctScroll{
-    if ((currentIndex < kPageCount ) || (currentIndex > self.datas.count - kPageCount)) {
-        NSLog(@"改之前%ld",currentIndex);
-        NSInteger currentPageIndex = currentIndex % kPageCount;
-        NSInteger terminal = (self.datas.count/(kPageCount)/2)*kPageCount+currentPageIndex;
+    if ((self.currentIndex <= self.pageCount) || (self.currentIndex >= self.datas.count - self.pageCount)) {
+        NSLog(@"改之前%ld",self.currentIndex);
+        NSInteger currentPageIndex = self.currentIndex % self.pageCount;
+        NSInteger terminal = (self.datas.count/(self.pageCount)/2)*self.pageCount+currentPageIndex;
         NSIndexPath * index =  [NSIndexPath indexPathForRow:terminal inSection:0];
-        NSLog(@"改之后%ld",(self.datas.count/kPageCount/2)*kPageCount+currentPageIndex);
-        currentIndex = terminal;
+        NSLog(@"改之后%ld",(self.datas.count/self.pageCount/2)*self.pageCount+currentPageIndex);
+        self.currentIndex = terminal;
         dispatch_async(dispatch_get_main_queue(), ^{
             [_collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
             _offer = _collectionView.contentOffset.x;
@@ -212,8 +219,26 @@ CGFloat _offer;
     [self correctScroll];
 }
 
+-(NSInteger)pageCount{
+    return self.modelArray.count;
+}
+
 -(void)dealloc{
     [self.timer invalidate];
     self.timer = nil;
+}
+
+-(void)stopTimer{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+-(void)startTimer{
+    if (!self.timer) {
+        if (_modelArray.count <= 0) {
+            return;
+        }
+        [self addtimer];
+    }
 }
 @end

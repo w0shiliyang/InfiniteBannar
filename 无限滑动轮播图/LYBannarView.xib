@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +20,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PN0-sF-CB3">
-                    <rect key="frame" x="0.0" y="0.0" width="261" height="233"/>
+                    <rect key="frame" x="0.0" y="18" width="261" height="235"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ADB-Au-Jfo">
                         <size key="itemSize" width="50" height="50"/>
@@ -39,18 +38,18 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" white="0.69883897569444442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="doV-bV-PCt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BfF-Xz-V2k"/>
                 <constraint firstAttribute="trailing" secondItem="PN0-sF-CB3" secondAttribute="trailing" id="HoK-XP-DlP"/>
                 <constraint firstItem="4ba-j5-Vvs" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="LTo-RI-0WA"/>
                 <constraint firstAttribute="trailing" secondItem="doV-bV-PCt" secondAttribute="trailing" id="VK5-zI-1Wt"/>
-                <constraint firstItem="doV-bV-PCt" firstAttribute="top" secondItem="PN0-sF-CB3" secondAttribute="bottom" id="XxG-zD-mga"/>
+                <constraint firstItem="doV-bV-PCt" firstAttribute="top" secondItem="PN0-sF-CB3" secondAttribute="bottom" constant="-20" id="XxG-zD-mga"/>
                 <constraint firstAttribute="bottom" secondItem="4ba-j5-Vvs" secondAttribute="bottom" id="hJz-7o-45D"/>
                 <constraint firstItem="4ba-j5-Vvs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kuU-ra-YLe"/>
                 <constraint firstItem="PN0-sF-CB3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mIa-7R-84e"/>
                 <constraint firstAttribute="bottom" secondItem="doV-bV-PCt" secondAttribute="bottom" id="oep-CH-l9C"/>
-                <constraint firstItem="PN0-sF-CB3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rUE-w1-uHr"/>
+                <constraint firstItem="PN0-sF-CB3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="rUE-w1-uHr"/>
                 <constraint firstAttribute="trailing" secondItem="4ba-j5-Vvs" secondAttribute="trailing" id="uPp-vp-YdC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

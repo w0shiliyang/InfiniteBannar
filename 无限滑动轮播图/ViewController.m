@@ -21,12 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGB(97, 183, 247, 1);
+    //多个轮播
     NSMutableArray * arr = [NSMutableArray new];
     for (NSInteger i = 0; i < 11; i ++) {
         LYBannarItemModel *model = [[LYBannarItemModel alloc] init];
         model.imageName = [NSString stringWithFormat:@"%zd",i];
         [arr addObject:model];
     }
+    //单个不轮播
+    /*
+        LYBannarItemModel *model = [[LYBannarItemModel alloc] init];
+        model.imageName = [NSString stringWithFormat:@"1zd"];
+        [arr addObject:model];
+     */
     [_banarView setData:arr];
     _banarView.delegate = self;
     

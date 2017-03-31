@@ -17,6 +17,8 @@
 @interface LYBannarView : UIView<XXNibBridge>
 @property (weak,   nonatomic) id<LYBannarDelegate> delegate;
 -(void)setData:(NSArray *)dataArray;
+-(void)stopTimer;
+-(void)startTimer;
 @end
 
 /*
